@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -13,9 +15,9 @@ class ProductController extends Controller
 
 
    public function index(){
-   //  $products=Product::all();
+   $products=Product::all();
 
-    return view('Product.index');
+    return view('Product.index', compact('products'));
   
      }
 
@@ -26,7 +28,7 @@ class ProductController extends Controller
 
    }
 
-   public function store(Request $request){
+   public function store(ProductRequest $request){
 
       $product = Product::create([
        
@@ -35,12 +37,10 @@ class ProductController extends Controller
       'description'=>$request->description,
       'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null
 
-
-
       ]);
 
      
-   return redirect(route('home'))->whit('message', 'Hai inserito con successo il piatto!');
+   return redirect(route('home'))->with('message', 'Hai inserito con successo il piatto!');
 
 
    }

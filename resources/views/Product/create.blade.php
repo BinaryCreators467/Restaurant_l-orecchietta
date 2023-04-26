@@ -1,7 +1,7 @@
 
 <x-layout>
     
-    <form method="POST" action="" class="formCustom p-5 shadow bg-danger" >
+    <form method="POST" action="{{route('storeProduct')}}" class="formCustom p-5 shadow bg-danger" enctype="multipart/form-data" >
 
         @csrf
         
@@ -20,7 +20,7 @@
             <input name="price" type="text" class="form-control" id="exampleInputPrice">
         </div>
         
-        
+        <div>
         <label for="exampleInputImage" class="form-label">Immagine</label>
         <input name="image" type="file" class="form-control" id="exampleInputImage" aria-describedby="imageHelp" accept="image/jpg, image/bmp, image/png, image/webp">
         </div>
