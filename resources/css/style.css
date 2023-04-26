@@ -1,0 +1,27 @@
+*{
+
+    font-family: 'Jura', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* .cover{
+
+height:500px;
+width:100%;
+background-image:url(/storage/images/restaurant.jpg);
+background-position: center;
+background-repeat: no-repeat;
+
+} */
+
+
+.formCustom{
+    
+    min-height: 500px;
+    width: 500px;
+    margin-left:450px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    
+}
