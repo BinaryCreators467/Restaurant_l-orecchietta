@@ -40,7 +40,7 @@ class ProductController extends Controller
       ]);
 
      
-   return redirect(route('home'))->with('message', 'Hai inserito con successo il piatto!');
+   return redirect(route('createProduct'))->with('message', 'Hai inserito con successo il piatto!');
 
 
    }
