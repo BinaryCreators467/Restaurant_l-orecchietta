@@ -15,6 +15,9 @@ class ProductController extends Controller
 
 
    public function index(){
+
+
+
    $products=Product::all();
 
     return view('Product.index', compact('products'));
@@ -35,7 +38,8 @@ class ProductController extends Controller
       'name'=>$request->name,
       'price'=>$request->price,
       'description'=>$request->description,
-      'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null
+      
+      'image'=>$request->has('image') ? $request->file('image')->store('app/public/image') : null
 
       ]);
 

@@ -21,12 +21,9 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 
 
-
-
 // rotta prodotti
 Route::get('/create-product', [ProductController::class, 'create'])->name('createProduct');
 Route::get('/index-product', [ProductController::class, 'index'])->name('indexProduct');
-
 Route::post('/store-product', [ProductController::class, 'store'])->name('storeProduct');
 
 

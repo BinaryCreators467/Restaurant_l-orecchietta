@@ -14,12 +14,13 @@
 
     <div class="container nome">
         <div class="row justify-content-center">
+
              @foreach($products as $product)
 
             <div class="col-12 col-md-4 d-flex justify-content-center">
 
                 <div class="card mt-5" style="width: 18rem;">
-                {{-- <img src="https://picsum.photos/200/300?random={{$product->id}}" class="card-img-top" alt="..."> --}}
+                <img src="{{Storage::url($product->image)}}" class="card-img-top" alt="image">
                 <div class="card-body">
 
                 <h5 class="card-title">{{$product->name}}</h5>

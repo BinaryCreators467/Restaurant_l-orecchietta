@@ -1,19 +1,18 @@
 *{
 
-    font-family: 'Jura', sans-serif;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lobster', cursive;
 }
 
 
-/* .cover{
+.cover{
 
-height:500px;
+height:800px;
 width:100%;
-background-image:url(/storage/images/restaurant.jpg);
-background-position: center;
+background-image:url('/public/storage/images/restaurant.jpg');
 background-repeat: no-repeat;
+background-size: cover;
 
-} */
+}
 
 
 .formCustom{

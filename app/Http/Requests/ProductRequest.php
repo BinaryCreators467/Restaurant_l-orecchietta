@@ -25,7 +25,7 @@ class ProductRequest extends FormRequest
             'name'=>'required|min:5',
             'price'=>'required',
             'description'=>'required',
-            // 'image'=>'mimes:jpg,bmp,png,webp'
+            'image'=>'mimes:jpg,bmp,png,webp'
         ];
     }
 
@@ -36,7 +36,7 @@ class ProductRequest extends FormRequest
             'name.min'=>'Il nome deve contenere almeno 5 caratteri',
             'price.required'=>'Il prezzo del prodotto è necessario',
             'description.required'=>'La descrizione del prodotto è necessaria',
-            // 'image.mimes'=>'Formato non corretto, inserire jpg, bmp, png, webp'
+            'image.mimes'=>'Formato non corretto, inserire jpg, bmp, png, webp'
         ];
     }
 }

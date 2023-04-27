@@ -1,5 +1,17 @@
 
 <x-layout>
+
+
+
+    @if (session()->has('message'))
+    
+            <div class="alert alert-success">
+
+                {{ session('message') }}
+
+            </div>
+               
+    @endif
     
     <form method="POST" action="{{route('storeProduct')}}" class="formCustom p-5 shadow bg-danger" enctype="multipart/form-data" >
 
