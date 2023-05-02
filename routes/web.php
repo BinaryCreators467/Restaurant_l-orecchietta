@@ -23,7 +23,12 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 // rotta prodotti
 Route::get('/create-product', [ProductController::class, 'create'])->name('createProduct');
-Route::get('/index-product', [ProductController::class, 'index'])->name('indexProduct');
 Route::post('/store-product', [ProductController::class, 'store'])->name('storeProduct');
+Route::get('/index-product', [ProductController::class, 'index'])->name('indexProduct');
+Route::get('/show-product/{product}', [ProductController::class, 'show'])->name('showProduct');
+Route::get('/edit-product/{product}', [ProductController::class, 'edit'])->name('editProduct');
+Route::put('/update-product/{product}', [ProductController::class, 'update'])->name('updateProduct');
+Route::delete('/delete-product/{product}', [ProductController::class, 'destroy'])->name('deleteProduct');
+
 
 

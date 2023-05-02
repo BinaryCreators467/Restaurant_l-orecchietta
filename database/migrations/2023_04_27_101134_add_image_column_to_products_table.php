@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
 
   
-         $table->string('image')->after('description')->default('public/image/default.jpg');
+        //  $table->string('image')->after('description')->default('public/image/default.jpg');
+
+        $table->string('image')->nullable()->after('description')->default('public/image/default.jpg');
 
 
         });
