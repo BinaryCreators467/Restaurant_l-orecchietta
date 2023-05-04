@@ -21,7 +21,7 @@
         </div>
         
         <div class="mb-3">
-            <label for="exampleInputDescription" class="form-label">descizione</label>
+            <label for="exampleInputDescription" class="form-label">Descrizione</label>
             <textarea name="description" class="form-control" id="exampleInputDescription" cols="30" rows="10"></textarea>
         </div>
         
