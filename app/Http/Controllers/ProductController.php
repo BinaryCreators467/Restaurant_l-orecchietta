@@ -8,22 +8,13 @@ use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
-
-
-
-
-
-
    public function index(){
-
-
 
    $products=Product::all();
 
     return view('Product.index', compact('products'));
   
      }
-
 
    public function create(){
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Shop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
@@ -34,7 +35,8 @@ class ShopController extends Controller
             'name'=>$request->name,
             'city'=>$request->city,
             'description'=>$request->description,   
-            'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null
+            'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null,
+            'user_id'=>Auth::user()->id
 
             
              ]);

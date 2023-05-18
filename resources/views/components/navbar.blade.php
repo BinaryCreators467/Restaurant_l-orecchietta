@@ -20,9 +20,12 @@
             <a class="nav-link" href="{{route('createShop')}}">Inserisci sponsor</a>
           </li>
 
-
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('indexShop')}}">Visualizza i nostri sponsor</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('userProfile')}}">Profilo utente</a>
           </li>
 
           <li class="nav-item dropdown">

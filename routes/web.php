@@ -20,8 +20,6 @@ use App\Http\Controllers\ProductController;
 // rotta welcome
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
-
-
 // rotta prodotti
 Route::get('/create-product', [ProductController::class, 'create'])->name('createProduct');
 Route::post('/store-product', [ProductController::class, 'store'])->name('storeProduct');
@@ -32,7 +30,6 @@ Route::put('/update-product/{product}', [ProductController::class, 'update'])->n
 Route::delete('/delete-product/{product}', [ProductController::class, 'destroy'])->name('deleteProduct');
 
 // rotte sponsor
-
 Route::get('/create-shop', [ShopController::class, 'create'])->name('createShop');
 Route::post('/store-shop',[ShopController::class, 'store'])->name('storeShop');
 Route::get('/index-shop', [ShopController::class, 'index'])->name('indexShop');
@@ -41,4 +38,5 @@ Route::get('/edit-shop/{shop}', [ShopController::class, 'edit'])->name('editShop
 Route::put('/update-shop/{shop}', [ShopController::class, 'update'])->name('updateShop');
 Route::delete('/delete-shop/{shop}', [ShopController::class, 'destroy'])->name('deleteShop');
 
-
+// rotte profilo utente
+Route::get('/user-profile', [HomeController::class, 'userProfile'])->name('userProfile');
