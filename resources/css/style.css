@@ -3,12 +3,17 @@
     font-family: 'Lobster', cursive;
 }
 
+:root{
+
+    --lightRed: #ee1d12d4;
+}
+
 
 .cover{
 
 height:800px;
 width:100%;
-background-image:url('/public/storage/images/restaurant.jpg');
+background-image:url('/public/storage/image/ristorante.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -29,3 +34,38 @@ background-size: cover;
     height: 500px;
     width: 100%;
 } */
+
+/* navbar */
+
+.bg{
+
+    background-color: var(--lightRed);
+
+}
+
+.titleCover{
+
+    margin-top: 300px;
+    margin-left: 80px;
+    font-size: 100px;
+    color: black;
+
+
+}
+
+.subTcover{
+
+    margin-left: 80px;
+    font-size: 50px;
+    color: black;
+    
+}
+
+@media screen and (max-width:390px){
+
+    .titleCover{
+
+        font-size:50px;
+    }
+    
+}
