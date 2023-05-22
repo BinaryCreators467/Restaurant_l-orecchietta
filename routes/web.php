@@ -40,3 +40,4 @@ Route::delete('/delete-shop/{shop}', [ShopController::class, 'destroy'])->name('
 
 // rotte profilo utente
 Route::get('/user-profile', [HomeController::class, 'userProfile'])->name('userProfile');
+Route::delete('/user-delete', [HomeController::class, 'destroy'])->name('deleteUser');

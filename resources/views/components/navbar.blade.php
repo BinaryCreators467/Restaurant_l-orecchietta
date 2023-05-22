@@ -8,25 +8,44 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
+
+          @auth
+
           <li class="nav-item">
             <a class="nav-link" href="{{route('createProduct')}}">Inserisci prodotto</a>
           </li>
 
+          @else
+
+          <li class="d-none"></li>
+
+          @endauth
+
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('indexProduct')}}">Visualizza i nostri piatti</a>
+            <a class="nav-link active" aria-current="page" href="{{route('indexProduct')}}">I nostri piatti</a>
           </li>
+
+
+          @auth
 
           <li class="nav-item">
             <a class="nav-link" href="{{route('createShop')}}">Inserisci sponsor</a>
           </li>
 
+          @endauth
+
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('indexShop')}}">Visualizza i nostri sponsor</a>
+            <a class="nav-link active" aria-current="page" href="{{route('indexShop')}}">I nostri sponsor</a>
           </li>
+
+          @auth
 
           <li class="nav-item">
             <a class="nav-link" href="{{route('userProfile')}}">Profilo utente</a>
           </li>
+
+          @endauth
+
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,10 +65,15 @@
               <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none"> 
                 @csrf 
               </form>
+
+          
                   
               @endguest
-              
+
+
             </ul>
+              
+{{--           
 
             @auth
 
@@ -67,7 +91,7 @@
 
             </li>
               
-          @endauth
+          @endauth --}}
 
           </li>
 
