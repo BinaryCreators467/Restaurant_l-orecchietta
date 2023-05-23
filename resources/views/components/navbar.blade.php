@@ -9,7 +9,36 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 
-          @auth
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Inserisci
+            </a>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="{{route('createProduct')}}">Nuovo piatto</a></li>
+              <li><a class="dropdown-item" href="{{route('createShop')}}">Nuovo sponsor</a></li> 
+
+            </ul>
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Le nostre scelte
+            </a>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="{{route('indexProduct')}}">I nostri piatti</a></li>
+              <li><a class="dropdown-item" href="{{route('indexShop')}}">I nostri sponsor</a></li> 
+
+            </ul>
+
+          </li>
+
+
+
+          {{-- @auth
 
           <li class="nav-item">
             <a class="nav-link" href="{{route('createProduct')}}">Inserisci prodotto</a>
@@ -44,12 +73,12 @@
             <a class="nav-link" href="{{route('userProfile')}}">Profilo utente</a>
           </li>
 
-          @endauth
+          @endauth --}}
 
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Accedi
+              Registrazione
             </a>
             <ul class="dropdown-menu">
 
@@ -72,9 +101,7 @@
 
 
             </ul>
-              
-{{--           
-
+            
             @auth
 
             <li class="nav-item mt-2 me-2 ms-2">
@@ -91,7 +118,7 @@
 
             </li>
               
-          @endauth --}}
+          @endauth
 
           </li>
 

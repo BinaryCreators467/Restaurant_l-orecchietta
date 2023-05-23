@@ -49,23 +49,37 @@ background-size: cover;
     margin-left: 80px;
     font-size: 100px;
     color: black;
-
+    /* background-color: blue; */
 
 }
 
+@media screen and (max-width:900px) {
+
+    .titleCover{
+
+        font-size: 50px;
+        margin-left: 40px;
+       
+    }
+
+    .subTcover{
+        
+        margin-left: 40px;
+        font-size: 30px;
+
+}}
+
 .subTcover{
 
-    margin-left: 80px;
-    font-size: 50px;
+    margin-left: 75px;
+    font-size: 35px;
     color: black;
     
 }
 
-@media screen and (max-width:390px){
-
-    .titleCover{
-
-        font-size:50px;
+/* @media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
     }
-    
-}
+  } */
+

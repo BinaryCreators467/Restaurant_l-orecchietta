@@ -55,13 +55,6 @@
 
                           </tr>
 
-
-
-                          
-                          
-                         
-                         
-
                           @endforeach
               
                         </tbody>
@@ -73,9 +66,6 @@
                             @csrf
                             <button type="submit" class="btn btn-danger">Cancella</button>
                         </form>
-                        
-                      
-
                   
                 </div>
             </div>

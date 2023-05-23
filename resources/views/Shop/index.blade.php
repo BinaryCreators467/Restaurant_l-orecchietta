@@ -41,13 +41,25 @@
 
         <a href="{{route('showShop', compact('shop'))}}" class="btn btn-primary">Dettaglio</a>
 
-        <a href="{{route('editShop', compact('shop'))}}" class="btn btn-primary">Modifica</a>
+        @auth
+            
+         @if($shop->user)
 
-        <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$shop->id}}').submit();" class="btn btn-primary">Elimina</a>
-        <form id="form-delete-{{$shop->id}}" method="POST" action="{{route('deleteShop', compact('shop'))}}">
-            @method('delete')
-            @csrf
-        </form>
+          @if(Auth::user()->id == $shop->user->id)
+
+            <a href="{{route('editShop', compact('shop'))}}" class="btn btn-primary">Modifica</a>
+
+            <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$shop->id}}').submit();" class="btn btn-primary">Elimina</a>
+            <form id="form-delete-{{$shop->id}}" method="POST" action="{{route('deleteShop', compact('shop'))}}">
+                @method('delete')
+                @csrf
+            </form>
+
+           @endif
+
+         @endif
+
+        @endauth
 
         </div>
         </div>
