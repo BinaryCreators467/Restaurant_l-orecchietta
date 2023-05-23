@@ -12,8 +12,8 @@
 .cover{
 
 height:800px;
-width:100%;
-background-image:url('/public/storage/image/ristorante.jpg');
+max-width:100%;
+background-image:url('/public/storage/image/restaurant.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -40,18 +40,30 @@ background-size: cover;
 .bg{
 
     background-color: var(--lightRed);
+    font-size: 25px;
+    color: white;
 
 }
 
 .titleCover{
 
-    margin-top: 300px;
-    margin-left: 80px;
+    margin-top: 320px;
+    margin-left: 50px;
     font-size: 100px;
     color: black;
-    /* background-color: blue; */
+    
 
 }
+
+.subTcover{
+
+    margin-left: 50px;
+    font-size: 35px;
+    color: black;
+    
+}
+
+
 
 @media screen and (max-width:900px) {
 
@@ -69,13 +81,7 @@ background-size: cover;
 
 }}
 
-.subTcover{
 
-    margin-left: 75px;
-    font-size: 35px;
-    color: black;
-    
-}
 
 /* @media screen and (max-width: 992px) {
     body {
