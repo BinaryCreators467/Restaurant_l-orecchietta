@@ -43,9 +43,9 @@
 
                 @auth
             
-                    @if($shop->user)
+                    @if($product->user)
 
-                         @if(Auth::user()->id == $shop->user->id)
+                         @if(Auth::user()->id == $product->user->id)
 
                 <a href="{{route('editProduct', compact('product'))}}" class="btn btn-primary">Modifica</a>
 

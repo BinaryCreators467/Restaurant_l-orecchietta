@@ -42,11 +42,11 @@
         <a href="{{route('showShop', compact('shop'))}}" class="btn btn-primary">Dettaglio</a>
 
         @auth
-            
-         @if($shop->user)
+
+        @if($shop->user)
 
           @if(Auth::user()->id == $shop->user->id)
-
+            
             <a href="{{route('editShop', compact('shop'))}}" class="btn btn-primary">Modifica</a>
 
             <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$shop->id}}').submit();" class="btn btn-primary">Elimina</a>
@@ -55,10 +55,10 @@
                 @csrf
             </form>
 
-           @endif
+            @endif
 
          @endif
-
+           
         @endauth
 
         </div>
