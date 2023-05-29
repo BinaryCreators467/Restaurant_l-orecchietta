@@ -35,6 +35,21 @@
         <input name="image" type="file" class="form-control" id="exampleInputImage" aria-describedby="imageHelp" accept="image/jpg, image/bmp, image/png, image/webp">
         </div>
 
+       {{-- <div class="mb-3">
+            <label for="exampleInputShop" class="form-label">Scegli negozi</label>
+            <select name="shops[]" multiple class="form-select" aria-label="Default select example" id="exampleInputShop"> --}}
+
+                 {{-- @foreach ($shops as $shop)
+
+                    <option value="{{$shop->id}}">{{$shop->name}}</option>
+
+                @endforeach --}}
+
+            {{-- </select> --}}
+
+        {{-- </div>   --}}
+
+
         <br>
         <button type="submit" class="btn btn-primary">Inserisci</button>
         

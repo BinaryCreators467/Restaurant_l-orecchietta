@@ -8,7 +8,7 @@
   
   
   {{-- favicon --}}
-  <link rel="icon" type="image/x-icon" href="/storage/images/fork.png">
+  <link rel="icon" type="image/x-icon" href="/images/fork.png">
   
   {{-- link google fonts --}}
   

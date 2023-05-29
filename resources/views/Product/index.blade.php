@@ -43,19 +43,20 @@
 
                 @auth
             
-                    @if($shop->user)
+                    @if($product->user)
 
-                         @if(Auth::user()->id == $shop->user->id)
+                         {{-- @if(Auth::user()->id == $product->user->id) --}}
 
                 <a href="{{route('editProduct', compact('product'))}}" class="btn btn-primary">Modifica</a>
 
                 <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$product->id}}').submit();" class="btn btn-primary">Elimina</a>
+
                 <form id="form-delete-{{$product->id}}" method="POST" action="{{route('deleteProduct', compact('product'))}}">
                     @method('delete')
                     @csrf
                 </form>
 
-                        @endif
+                        {{-- @endif --}}
 
                     @endif
 
