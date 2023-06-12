@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Shop extends Model
 {
@@ -25,7 +27,11 @@ class Shop extends Model
 
         return $this->belongsTo(User::class);
 
+    }
 
+    public function products(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class);
     }
 
 }

@@ -45,7 +45,11 @@
             
                     @if($product->user)
 
+<<<<<<< HEAD
                          {{-- @if(Auth::user()->id == $product->user->id) --}}
+=======
+                         @if(Auth::user()->id == $product->user->id)
+>>>>>>> dbd703c831bb11c87651f1bbea934e9930b8aea9
 
                 <a href="{{route('editProduct', compact('product'))}}" class="btn btn-primary">Modifica</a>
 

@@ -5,7 +5,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6">
     
-                    <h1>Accedi</h1>
+                    <h1>Sign in</h1>
     
                 </div>
             </div>

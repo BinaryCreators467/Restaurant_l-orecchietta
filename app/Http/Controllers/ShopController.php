@@ -37,14 +37,9 @@ class ShopController extends Controller
             'description'=>$request->description,   
             'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null,
             'user_id'=>Auth::user()->id
-
-            
              ]);
 
-            return redirect(route('createShop'))->with('message', 'Hai inserito con successo il tuo sponsor!');
-
-      
-           
+            return redirect(route('createShop'))->with('message', 'Hai inserito con successo il tuo sponsor!'); 
     }
 
     /**
@@ -76,6 +71,9 @@ class ShopController extends Controller
             'image'=>$request->has('image') ? $request->file('image')->store('public/image') : null
       
             ]);
+
+            // $product->shops()->attach($request->shops);
+            $shop->products()->attach($request->products);
    
          return redirect(route('indexShop'))->with('message', 'Hai modificato correttamente lo sponsor');
    
